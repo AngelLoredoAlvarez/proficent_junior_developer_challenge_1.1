@@ -56,8 +56,6 @@ module.exports = {
     "no-else-return": 0,
     "no-return-assign": [2, "except-parens"],
     "no-underscore-dangle": 0,
-    "jest/no-focused-tests": 2,
-    "jest/no-identical-title": 2,
     camelcase: 0,
     "prefer-arrow-callback": [
       "error",

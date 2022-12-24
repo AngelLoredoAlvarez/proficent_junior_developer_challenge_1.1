@@ -1,7 +1,13 @@
 import * as React from "react";
 
+import { NavBarComponent } from "../components/NavBar";
+
 function IndexPage() {
-  return <div>Index Page</div>;
+  return (
+    <React.Fragment>
+      <NavBarComponent />
+    </React.Fragment>
+  );
 }
 
 export default IndexPage;

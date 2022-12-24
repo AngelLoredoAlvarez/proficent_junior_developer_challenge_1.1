@@ -1,7 +1,8 @@
-import * as React from "react";
-import Head from "next/head";
 import "../styles/globals.css";
+
 import type { AppProps } from "next/app";
+import Head from "next/head";
+import * as React from "react";
 
 function App({ Component, pageProps }: AppProps) {
   return (

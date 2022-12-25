@@ -3,6 +3,7 @@ import * as React from "react";
 import { FooterComponent } from "../components/Footer";
 import { ItemComponent } from "../components/Item";
 import { NavBarComponent } from "../components/NavBar";
+import { SummaryComponent } from "../components/Summary";
 
 function IndexPage() {
   return (
@@ -32,7 +33,9 @@ function IndexPage() {
           <ItemComponent />
           <ItemComponent />
         </div>
-        <div className="border-2 flex justify-center mx-96 mb-20" />
+        <div className="flex justify-center mx-96 mb-20">
+          <SummaryComponent />
+        </div>
       </div>
       <FooterComponent />
     </React.Fragment>

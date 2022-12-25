@@ -4,8 +4,11 @@ import { FooterComponent } from "../components/Footer";
 import { ItemComponent } from "../components/Item";
 import { NavBarComponent } from "../components/NavBar";
 import { SummaryComponent } from "../components/Summary";
+import { useStore } from "../data/store";
 
 function IndexPage() {
+  const { items } = useStore();
+
   return (
     <React.Fragment>
       <NavBarComponent />
@@ -22,16 +25,9 @@ function IndexPage() {
           </p>
         </div>
         <div className="mx-5 md:mx10 lg:mx-20 xl:mx-30 2xl:mx-40 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-5 gap-5">
-          <ItemComponent />
-          <ItemComponent />
-          <ItemComponent />
-          <ItemComponent />
-          <ItemComponent />
-          <ItemComponent />
-          <ItemComponent />
-          <ItemComponent />
-          <ItemComponent />
-          <ItemComponent />
+          {items.map((data) => (
+            <ItemComponent key={data.description} {...data} />
+          ))}
         </div>
         <div className="flex justify-center mb-20">
           <SummaryComponent />

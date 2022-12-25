@@ -7,8 +7,8 @@ function IndexPage() {
   return (
     <React.Fragment>
       <NavBarComponent />
-      <div className="border-2 flex-1 h-screen">
-        <p className="text-center font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
+      <div className="flex-1 h-screen bg-white dark:bg-slate-500">
+        <p className="text-center font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl dark:text-white">
           What items to store?
         </p>
       </div>

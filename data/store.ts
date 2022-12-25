@@ -1,6 +1,6 @@
 import create from "zustand";
 
-interface Item {
+export interface Item {
   icon: string;
   description: string;
   m2: number;

@@ -1,7 +1,13 @@
 import create from "zustand";
 
+interface Item {
+  icon: string;
+  description: string;
+  m2: number;
+}
+
 interface ItemsState {
-  items: [];
+  items: Item[];
   totalItems: number;
   totalM2: number;
   subtotal: number;

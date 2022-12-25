@@ -4,6 +4,7 @@ import * as React from "react";
 const ItemComponent: React.FC = () => {
   return (
     <Card>
+      <div className="border-2" />
       <p className="font-normal text-gray-700 dark:text-gray-400 text-center">
         Beds
       </p>

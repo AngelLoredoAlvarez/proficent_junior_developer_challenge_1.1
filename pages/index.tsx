@@ -32,6 +32,7 @@ function IndexPage() {
           <ItemComponent />
           <ItemComponent />
         </div>
+        <div className="border-2 flex justify-center mx-96 mb-20" />
       </div>
       <FooterComponent />
     </React.Fragment>

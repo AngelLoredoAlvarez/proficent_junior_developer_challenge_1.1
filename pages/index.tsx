@@ -21,7 +21,7 @@ function IndexPage() {
             your new home. We'll keep'em safe!
           </p>
         </div>
-        <div className="mx-5 md:mx10 lg:mx-20 xl:mx-30 2xl:mx-40 grid grid-cols-1 sm:grid-cols-2:mx-20 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-5 gap-5">
+        <div className="mx-5 md:mx10 lg:mx-20 xl:mx-30 2xl:mx-40 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-5 gap-5">
           <ItemComponent />
           <ItemComponent />
           <ItemComponent />
@@ -33,7 +33,7 @@ function IndexPage() {
           <ItemComponent />
           <ItemComponent />
         </div>
-        <div className="flex justify-center mx-96 mb-20">
+        <div className="flex justify-center mb-20">
           <SummaryComponent />
         </div>
       </div>

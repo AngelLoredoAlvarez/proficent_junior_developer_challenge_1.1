@@ -9,7 +9,7 @@ function IndexPage() {
     <React.Fragment>
       <NavBarComponent />
       <div className="bg-white dark:bg-slate-500 grid gap-10 items-center">
-        <p className="text-center font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl dark:text-white">
+        <p className="text-center font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl dark:text-white mt-20">
           What items to store?
         </p>
         <div>

@@ -1,10 +1,13 @@
 import { Button, Card, TextInput } from "flowbite-react";
 import * as React from "react";
+import { FaBed } from "react-icons/fa";
 
 const ItemComponent: React.FC = () => {
   return (
     <Card>
-      <div className="border-2" />
+      <div className="flex justify-center">
+        <FaBed className="text-gray-900 dark:text-white" size={50} />
+      </div>
       <p className="font-normal text-gray-700 dark:text-gray-400 text-center">
         Beds
       </p>

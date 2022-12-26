@@ -15,7 +15,7 @@ import {
   WasherDryerSvg,
 } from "./Svgs";
 
-const ItemComponent: React.FC<Item> = ({ icon, description }) => {
+const ItemComponent: React.FC<Item> = ({ icon, description, quantity }) => {
   return (
     <Card>
       <div className="flex justify-center">
@@ -50,7 +50,10 @@ const ItemComponent: React.FC<Item> = ({ icon, description }) => {
             -
           </Button>
         </span>
-        <TextInput className="rounded-none bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+        <TextInput
+          className="rounded-none bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          value={quantity}
+        />
         <span className="inline-flex items-center border border-r-0 rounded-r-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
           <Button className="bg-orange-500 hover:bg-orange-400 dark:bg-slate-700 dark:hover:bg-slate-800">
             +

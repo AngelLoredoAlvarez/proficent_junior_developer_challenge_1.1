@@ -16,6 +16,7 @@ interface ItemsState {
   total: number;
   dueToday50: number;
   addItem: (description: string, quantity: number) => void;
+  removeItem: (description: string, quantity: number) => void;
 }
 
 const useStore = create<ItemsState>((set) => ({
@@ -122,6 +123,48 @@ const useStore = create<ItemsState>((set) => ({
             0.16),
       dueToday50:
         state.dueToday50 +
+        (state.items.filter((item) => item.description === description)[0].m2 *
+          200 +
+          state.items.filter((item) => item.description === description)[0].m2 *
+            200 *
+            0.16) *
+          0.5,
+    }));
+  },
+  // function that is called when the <Button>-</Button is pressed
+  removeItem: (description: string, quantity: number) => {
+    set((state) => ({
+      items: state.items?.map((item) =>
+        item.description === description
+          ? ({ ...item, quantity: quantity - 1 } as Item)
+          : item
+      ),
+      totalItems: state.totalItems - 1,
+      totalM2:
+        Math.round(
+          (state.totalM2 -
+            state.items.filter((item) => item.description === description)[0]
+              .m2) *
+            100
+        ) / 100,
+      subtotal:
+        state.subtotal -
+        state.items.filter((item) => item.description === description)[0].m2 *
+          200,
+      tax:
+        state.tax -
+        state.items.filter((item) => item.description === description)[0].m2 *
+          200 *
+          0.16,
+      total:
+        state.total -
+        (state.items.filter((item) => item.description === description)[0].m2 *
+          200 +
+          state.items.filter((item) => item.description === description)[0].m2 *
+            200 *
+            0.16),
+      dueToday50:
+        state.dueToday50 -
         (state.items.filter((item) => item.description === description)[0].m2 *
           200 +
           state.items.filter((item) => item.description === description)[0].m2 *

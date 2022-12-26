@@ -29,7 +29,7 @@ const useStore = create<ItemsState>((_set) => ({
       m2: 1,
     },
     {
-      icon: "forniture",
+      icon: "furniture",
       description: "Forniture",
       m2: 0.5,
     },

@@ -1,18 +1,48 @@
 import { Button, Card, TextInput } from "flowbite-react";
 import * as React from "react";
 
-// import { FaBed } from "react-icons/fa";
 import { Item } from "../data/store";
+import {
+  BedSvg,
+  DeskSvg,
+  DiningSvg,
+  FurnitureSvg,
+  OvenSvg,
+  RefrigeratorSvg,
+  SofaSvg,
+  TvSvg,
+  WardroveSvg,
+  WasherDryerSvg,
+} from "./Svgs";
 
-const ItemComponent: React.FC<Item> = ({ icon, description, m2 }) => {
+const ItemComponent: React.FC<Item> = ({ icon, description }) => {
   return (
     <Card>
       <div className="flex justify-center">
-        {/* <FaBed className="text-gray-900 dark:text-white" size={50} /> */}
-        <div>{icon}</div>
+        {icon === "bed" ? (
+          <BedSvg />
+        ) : icon === "refrigerator" ? (
+          <RefrigeratorSvg />
+        ) : icon === "furniture" ? (
+          <FurnitureSvg />
+        ) : icon === "oven" ? (
+          <OvenSvg />
+        ) : icon === "sofa" ? (
+          <SofaSvg />
+        ) : icon === "tv" ? (
+          <TvSvg />
+        ) : icon === "washer-dryer" ? (
+          <WasherDryerSvg />
+        ) : icon === "dining" ? (
+          <DiningSvg />
+        ) : icon === "desk" ? (
+          <DeskSvg />
+        ) : icon === "wardrobe" ? (
+          <WardroveSvg />
+        ) : null}
       </div>
       <p className="font-normal text-gray-700 dark:text-gray-400 text-center">
-        {description} {m2}
+        {description}
       </p>
       <div className="flex">
         <span className="inline-flex items-center text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">

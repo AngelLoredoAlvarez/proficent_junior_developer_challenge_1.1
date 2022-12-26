@@ -1,7 +1,7 @@
 import { Button, Card, TextInput } from "flowbite-react";
 import * as React from "react";
 
-import { Item } from "../data/store";
+import { Item, useStore } from "../data/store";
 import {
   BedSvg,
   DeskSvg,
@@ -16,6 +16,8 @@ import {
 } from "./Svgs";
 
 const ItemComponent: React.FC<Item> = ({ icon, description, quantity }) => {
+  const { addItem } = useStore();
+
   return (
     <Card>
       <div className="flex justify-center">
@@ -55,7 +57,10 @@ const ItemComponent: React.FC<Item> = ({ icon, description, quantity }) => {
           value={quantity}
         />
         <span className="inline-flex items-center border border-r-0 rounded-r-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
-          <Button className="bg-orange-500 hover:bg-orange-400 dark:bg-slate-700 dark:hover:bg-slate-800">
+          <Button
+            className="bg-orange-500 hover:bg-orange-400 dark:bg-slate-700 dark:hover:bg-slate-800"
+            onClick={() => addItem(description, quantity)}
+          >
             +
           </Button>
         </span>

@@ -12,6 +12,7 @@ interface ItemsState {
   totalItems: number;
   totalM2: number;
   subtotal: number;
+  tax: number;
   total: number;
   dueToday50: number;
 }
@@ -83,6 +84,7 @@ const useStore = create<ItemsState>((_set) => ({
   totalItems: 0,
   totalM2: 0,
   subtotal: 0,
+  tax: 0,
   total: 0,
   dueToday50: 0,
   // initialize the state

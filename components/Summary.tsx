@@ -5,17 +5,19 @@ import shallow from "zustand/shallow";
 import { useStore } from "../data/store";
 
 const SummaryComponent: React.FC = () => {
-  const { totalItems, totalM2, subtotal, tax, total, dueToday50 } = useStore(
-    (state) => ({
-      totalItems: state.totalItems,
-      totalM2: state.totalM2,
-      subtotal: state.subtotal,
-      tax: state.tax,
-      total: state.total,
-      dueToday50: state.dueToday50,
-    }),
-    shallow
-  );
+  const { totalItems, totalM2, subtotal, tax, total, dueToday50, clearItems } =
+    useStore(
+      (state) => ({
+        totalItems: state.totalItems,
+        totalM2: state.totalM2,
+        subtotal: state.subtotal,
+        tax: state.tax,
+        total: state.total,
+        dueToday50: state.dueToday50,
+        clearItems: state.clearItems,
+      }),
+      shallow
+    );
 
   return (
     <Card>
@@ -69,7 +71,10 @@ const SummaryComponent: React.FC = () => {
           })}
         </p>
         <div className="col-span-2">
-          <Button className="flex w-full bg-orange-500 hover:bg-orange-400 dark:bg-slate-700 dark:hover:bg-slate-900">
+          <Button
+            className="flex w-full bg-orange-500 hover:bg-orange-400 dark:bg-slate-700 dark:hover:bg-slate-900"
+            onClick={() => clearItems()}
+          >
             Clear
           </Button>
         </div>

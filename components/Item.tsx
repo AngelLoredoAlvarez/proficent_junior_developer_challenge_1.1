@@ -48,7 +48,10 @@ const ItemComponent: React.FC<Item> = ({ icon, description, quantity }) => {
       </p>
       <div className="flex">
         <span className="inline-flex items-center text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
-          <Button className="bg-orange-500 hover:bg-orange-400 dark:bg-slate-700 dark:hover:bg-slate-800">
+          <Button
+            className="bg-orange-500 hover:bg-orange-400 dark:bg-slate-700 dark:hover:bg-slate-800"
+            disabled={quantity === 0}
+          >
             -
           </Button>
         </span>

@@ -1,5 +1,6 @@
 import { Button, Card, TextInput } from "flowbite-react";
 import * as React from "react";
+import shallow from "zustand/shallow";
 
 import { Item, useStore } from "../data/store";
 import {
@@ -16,7 +17,12 @@ import {
 } from "./Svgs";
 
 const ItemComponent: React.FC<Item> = ({ icon, description, quantity }) => {
-  const { addItem } = useStore();
+  const { addItem } = useStore(
+    (state) => ({
+      addItem: state.addItem,
+    }),
+    shallow
+  );
 
   return (
     <Card>

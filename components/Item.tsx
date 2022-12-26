@@ -17,9 +17,10 @@ import {
 } from "./Svgs";
 
 const ItemComponent: React.FC<Item> = ({ icon, description, quantity }) => {
-  const { addItem } = useStore(
+  const { addItem, removeItem } = useStore(
     (state) => ({
       addItem: state.addItem,
+      removeItem: state.removeItem,
     }),
     shallow
   );
@@ -57,6 +58,7 @@ const ItemComponent: React.FC<Item> = ({ icon, description, quantity }) => {
           <Button
             className="bg-orange-500 hover:bg-orange-400 dark:bg-slate-700 dark:hover:bg-slate-800"
             disabled={quantity === 0}
+            onClick={() => removeItem(description, quantity)}
           >
             -
           </Button>

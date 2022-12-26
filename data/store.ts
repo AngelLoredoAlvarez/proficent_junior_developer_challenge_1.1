@@ -17,6 +17,7 @@ interface ItemsState {
   dueToday50: number;
   addItem: (description: string, quantity: number) => void;
   removeItem: (description: string, quantity: number) => void;
+  clearItems: () => void;
 }
 
 const useStore = create<ItemsState>((set) => ({
@@ -171,6 +172,18 @@ const useStore = create<ItemsState>((set) => ({
             200 *
             0.16) *
           0.5,
+    }));
+  },
+  // function that is called when the <Button>Clear</Button> is pressed
+  clearItems: () => {
+    set(() => ({
+      items: [],
+      totalItems: 0,
+      totalM2: 0,
+      subtotal: 0,
+      tax: 0,
+      total: 0,
+      dueToday50: 0,
     }));
   },
 }));

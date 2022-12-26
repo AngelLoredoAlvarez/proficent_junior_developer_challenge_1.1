@@ -65,6 +65,7 @@ const ItemComponent: React.FC<Item> = ({ icon, description, quantity }) => {
         </span>
         <TextInput
           className="rounded-none bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          readOnly={true}
           value={quantity}
         />
         <span className="inline-flex items-center border border-r-0 rounded-r-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
